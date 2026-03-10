@@ -18,28 +18,28 @@ export function WorkCard({ work, featured = false }: WorkCardProps) {
       />
       <div className={featured ? 'p-6' : 'p-4'}>
         <div className="flex items-center gap-3 mb-2">
-          <span className={`text-[10px] font-semibold ${work.category === 'live' ? 'text-accent-green' : 'text-accent-blue'}`}>
+          <span className={`text-[13px] font-semibold ${work.category === 'live' ? 'text-accent-green' : 'text-accent-blue'}`}>
             {work.category === 'live' ? 'Live World' : 'Game World'}
           </span>
-          <span className="text-[10px] text-text-subtle">{work.year}</span>
+          <span className="text-[13px] text-text-subtle">{work.year}</span>
         </div>
-        <h3 className={`font-bold text-text ${featured ? 'text-lg tracking-tight mb-1.5' : 'text-sm'}`}>
+        <h3 className={`font-bold text-text ${featured ? 'text-xl tracking-tight mb-2' : 'text-base'}`}>
           {work.title}
         </h3>
         {featured && (
-          <p className="text-xs text-text-muted leading-[1.7] mt-1.5">
+          <p className="text-[15px] text-text-muted leading-[1.7] mt-2">
             {work.description}
           </p>
         )}
         {!featured && work.subtitle && (
-          <p className="text-[11px] text-text-muted mt-1">{work.subtitle}</p>
+          <p className="text-sm text-text-muted mt-1">{work.subtitle}</p>
         )}
         {work.externalUrl && (
           <a
             href={work.externalUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-2.5 text-[11px] text-text-subtle"
+            className="inline-block mt-3 text-[13px] text-text-subtle"
           >
             VRChatで見る →
           </a>

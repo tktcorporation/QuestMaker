@@ -22,7 +22,7 @@ export function WorkFilter({ active, onChange }: WorkFilterProps) {
           <button
             key={f.key}
             onClick={() => onChange(f.key)}
-            className={`text-xs pb-2.5 transition-colors duration-150 ${
+            className={`text-sm pb-2.5 transition-colors duration-150 ${
               active === f.key
                 ? 'text-text font-medium border-b-[1.5px] border-text'
                 : 'text-text-subtle'

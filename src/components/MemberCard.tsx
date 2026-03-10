@@ -11,23 +11,23 @@ export function MemberCard({ member }: { member: Member }) {
         <img
           src={member.image}
           alt={member.name}
-          className="w-12 h-12 rounded-full object-cover shrink-0 border-[1.5px] border-border"
+          className="w-14 h-14 rounded-full object-cover shrink-0 border-[1.5px] border-border"
         />
         <div>
-          <p className="text-sm font-semibold text-text">{member.name}</p>
-          <p className={`text-[10px] mt-0.5 font-medium ${member.roleLabel === 'green' ? 'text-accent-green' : 'text-accent-blue'}`}>
+          <p className="text-base font-semibold text-text">{member.name}</p>
+          <p className={`text-[13px] mt-0.5 font-medium ${member.roleLabel === 'green' ? 'text-accent-green' : 'text-accent-blue'}`}>
             {member.role}
           </p>
         </div>
       </div>
-      <p className="text-[11px] text-text-muted leading-relaxed">
+      <p className="text-sm text-text-muted leading-relaxed">
         {member.description}
       </p>
       <a
         href={member.xUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block mt-3 text-[10px] text-text-subtle"
+        className="inline-block mt-3 text-[13px] text-text-subtle"
       >
         {member.xHandle}
       </a>

@@ -24,7 +24,7 @@ export function SocialButton({ variant, label, href }: SocialButtonProps) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[5px] text-[11px] font-medium ${styles[variant]}`}
+      className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-[5px] text-[13px] font-medium ${styles[variant]}`}
     >
       {label ?? defaultLabels[variant]}
     </a>

@@ -14,21 +14,18 @@ export function Header() {
 
   return (
     <header className="bg-surface border-b border-border">
-      <div className="max-w-[1200px] mx-auto flex items-center justify-between px-7 py-3">
-        <Link to="/" className="flex items-center gap-2">
+      <div className="max-w-[1200px] mx-auto flex items-center justify-between px-7 py-2">
+        <Link to="/" className="flex items-center">
           <img
             src="/images/QuestMaker_Logo_alpha.png"
             alt="QuestMaker"
-            className="w-8 h-8 rounded-full"
+            className="h-12 md:h-14"
           />
-          <span className="text-[15px] font-bold tracking-tight text-text">
-            QuestMaker
-          </span>
         </Link>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-6">
-          <nav className="flex gap-5 text-[13px] text-text-muted">
+          <nav className="flex gap-6 text-sm text-text-muted">
             <Link
               to="/"
               activeProps={{ className: 'text-text font-medium' }}
@@ -85,7 +82,7 @@ export function Header() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden border-t border-border px-7 py-4 bg-surface">
-          <nav className="flex flex-col gap-3 text-[13px] text-text-muted mb-4">
+          <nav className="flex flex-col gap-3 text-sm text-text-muted mb-4">
             <Link
               to="/"
               onClick={() => setMenuOpen(false)}

@@ -14,14 +14,14 @@ export function WorksPreview() {
       <div className="max-w-[1200px] mx-auto">
         <div className="flex justify-between items-baseline mb-6">
           <div>
-            <p className="text-[10px] tracking-[3px] text-accent-blue mb-1 font-semibold">
+            <p className="text-[13px] tracking-[3px] text-accent-blue mb-1 font-semibold uppercase">
               WORKS
             </p>
-            <h2 className="text-xl font-bold tracking-tight text-text">
+            <h2 className="text-2xl font-bold tracking-tight text-text">
               制作実績
             </h2>
           </div>
-          <Link to="/works" className="text-xs text-text-muted">
+          <Link to="/works" className="text-sm text-text-muted">
             すべて見る →
           </Link>
         </div>
@@ -34,14 +34,14 @@ export function WorksPreview() {
               alt={featured.title}
               className="w-full aspect-[16/10] object-cover"
             />
-            <div className="p-4.5">
-              <p className="text-[10px] text-accent-green mb-1.5 font-semibold">
+            <div className="p-5">
+              <p className="text-[13px] text-accent-green mb-1.5 font-semibold">
                 {featured.category === 'live' ? 'Live World' : 'Game World'}
               </p>
-              <h3 className="text-sm font-semibold leading-snug text-text">
+              <h3 className="text-base font-semibold leading-snug text-text">
                 {featured.title}
               </h3>
-              <p className="text-[11px] text-text-muted mt-1.5">
+              <p className="text-sm text-text-muted mt-1.5">
                 {featured.subtitle}
               </p>
             </div>
@@ -58,13 +58,13 @@ export function WorksPreview() {
                 alt={work.title}
                 className="w-full aspect-[16/9] object-cover"
               />
-              <div className="p-3.5">
+              <div className="p-4">
                 <p
-                  className={`text-[10px] mb-1 font-semibold ${work.category === 'live' ? 'text-accent-green' : 'text-accent-blue'}`}
+                  className={`text-[13px] mb-1 font-semibold ${work.category === 'live' ? 'text-accent-green' : 'text-accent-blue'}`}
                 >
                   {work.category === 'live' ? 'Live World' : 'Game World'}
                 </p>
-                <h3 className="text-[13px] font-semibold text-text">
+                <h3 className="text-sm font-semibold text-text">
                   {work.title}
                 </h3>
               </div>

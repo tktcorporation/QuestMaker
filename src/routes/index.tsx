@@ -1,6 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { HeroSection } from '~/components/HeroSection'
-import { PhotoStrip } from '~/components/PhotoStrip'
 import { MissionStatement } from '~/components/MissionStatement'
 import { WorksPreview } from '~/components/WorksPreview'
 import { MemberPreview } from '~/components/MemberPreview'
@@ -14,7 +13,6 @@ function HomePage() {
   return (
     <>
       <HeroSection />
-      <PhotoStrip />
       <MissionStatement />
       <SectionDivider from="var(--color-surface)" to="var(--color-bg)" />
       <WorksPreview />

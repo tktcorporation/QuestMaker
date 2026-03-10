@@ -2,23 +2,35 @@ import type { Member } from '~/data/members'
 import { Badge } from '~/components/ui/badge'
 
 /**
- * メンバーカード。2カラムグリッド用のコンパクト横並びレイアウト。
- * パネル画像(左) + プロフィール情報(右)。
+ * メンバーカード。2カラムグリッド用の横並びレイアウト。
  *
- * カード背景なしでエディトリアルな印象を維持しつつ、
- * 1画面で全員見渡せる密度を実現。
+ * index を受け取り、パネル画像に微回転をかけてステッカー風の遊びを出す。
+ * 回転角度はメンバーごとに固定（ランダムではなく決定的）で、
+ * -3deg〜3deg の範囲で散らす。整列しすぎない有機的な配置に。
  */
-export function MemberCard({ member }: { member: Member }) {
+
+/** メンバーごとの微回転角度。手貼りステッカー風の散らし。 */
+const rotations = [-2, 1.5, -1, 2.5, -1.5, 2, -2.5, 1]
+
+export function MemberCard({
+  member,
+  index = 0,
+}: {
+  member: Member
+  index?: number
+}) {
   const hasDistinctIcon = member.image !== member.panelImage
+  const rotation = rotations[index % rotations.length]
 
   return (
     <div className="flex items-center gap-5">
-      {/* パネル画像 */}
+      {/* パネル画像 — 微回転でステッカー風 */}
       <div className="shrink-0 flex items-end justify-center w-[160px] h-[200px]">
         <img
           src={member.panelImage}
           alt={member.name}
-          className="max-w-full max-h-full object-contain object-bottom drop-shadow-md"
+          className="max-w-full max-h-full object-contain object-bottom drop-shadow-md transition-transform duration-300"
+          style={{ transform: `rotate(${rotation}deg)` }}
         />
       </div>
 

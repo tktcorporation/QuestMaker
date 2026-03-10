@@ -16,7 +16,7 @@ export const members: Member[] = [
   {
     id: 'anoko',
     name: 'あの子',
-    role: 'Director',
+    role: 'Producer / Director',
     roleLabel: 'green',
     description:
       "代表・ディレクター。『題名のないお茶会』や『劇団あのこ』などQuest対応イベントを主催。",
@@ -76,7 +76,8 @@ export const members: Member[] = [
   {
     id: 'tkt',
     name: 'tkt',
-    role: 'Tech Lead',
+    role: 'Assistant Director',
+
     roleLabel: 'blue',
     description:
       'スケジュール管理・Git等の技術フォロー。個人でWebアプリ開発も。',
@@ -84,29 +85,5 @@ export const members: Member[] = [
     panelImage: '/images/panel_tkt.png',
     xUrl: 'https://x.com/tktcorporation',
     xHandle: '@tktcorporation',
-  },
-  {
-    id: 'nikomaru',
-    name: '猫田にこまる',
-    role: 'World Creator',
-    roleLabel: 'blue',
-    description:
-      'ワールド制作担当。VRChatのワールドづくりでチームに貢献。',
-    image: '/images/panel_nikomaru.png',
-    panelImage: '/images/panel_nikomaru.png',
-    xUrl: 'https://x.com/nikomaru',
-    xHandle: '@nikomaru',
-  },
-  {
-    id: 'salami',
-    name: 'さらみせんべい',
-    role: 'World Creator',
-    roleLabel: 'green',
-    description:
-      'ワールド制作担当。QuestMakerのワールドづくりに参加。',
-    image: '/images/panel_salami.png',
-    panelImage: '/images/panel_salami.png',
-    xUrl: 'https://x.com/salamisenbei',
-    xHandle: '@salamisenbei',
   },
 ]

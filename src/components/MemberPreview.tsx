@@ -19,7 +19,7 @@ export function MemberPreview() {
             label="MEMBERS"
             labelColor="green"
             title="QuestMakerのメンバー"
-            subtitle="個性豊かなクリエイターたちが集まって、楽しいワールドを作っています！"
+            subtitle="個性豊かなクリエイターたちが集まって、楽しいコンテンツを作っています！"
             align="center"
           />
         </div>

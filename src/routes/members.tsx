@@ -20,7 +20,7 @@ function MembersPage() {
         subtitle="個性豊かなクリエイターたちが集まって、楽しいワールドを作っています"
       />
 
-      <div className="max-w-[1200px] mx-auto px-7 py-10 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+      <div className="max-w-[1100px] mx-auto px-7 py-10 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
         {members.map((member) => (
           <MemberCard key={member.id} member={member} />
         ))}

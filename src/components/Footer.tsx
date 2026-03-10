@@ -21,10 +21,10 @@ export function Footer() {
               Creative Team for VRChat
             </p>
           </div>
-          <div className="flex flex-col gap-1.5 items-end">
+          <div className="flex flex-col gap-2.5 items-end">
             <SocialButton
               variant="x"
-              label={'\u{1d54f} @QuestMaker_'}
+              label="@QuestMaker_"
               href="https://x.com/QuestMaker_"
             />
             <SocialButton

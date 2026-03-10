@@ -1,49 +1,51 @@
 import { Link } from '@tanstack/react-router'
 import { members } from '~/data/members'
+import { buttonClass } from '~/components/ui/button'
+import { SectionHeader } from '~/components/ui/section-header'
 
 /**
- * トップページ用メンバーアバター一覧。
- * 丸アイコン + 名前 + ロールをコンパクトに表示。
+ * トップページ用メンバープレビュー。
+ * パネル画像（ステッカー風キャラアート）を使い、
+ * VRChatチームらしい個性的な見た目にする。
+ *
+ * 各メンバーのアバターアートを横並びに表示し、名前を添える。
  */
 export function MemberPreview() {
   return (
-    <section className="px-7 py-12 bg-surface">
+    <section className="px-7 py-16 bg-surface">
       <div className="max-w-[1200px] mx-auto">
-        <div className="text-center mb-7">
-          <p className="text-[13px] tracking-[3px] text-accent-green mb-1 font-semibold uppercase">
-            MEMBERS
-          </p>
-          <h2 className="text-2xl font-bold tracking-tight text-text">
-            QuestMakerのメンバー
-          </h2>
-          <p className="text-[15px] text-text-muted mt-2">
-            個性豊かなクリエイターたちが集まって、楽しいワールドを作っています！
-          </p>
+        <div className="mb-10">
+          <SectionHeader
+            label="MEMBERS"
+            labelColor="green"
+            title="QuestMakerのメンバー"
+            subtitle="個性豊かなクリエイターたちが集まって、楽しいワールドを作っています！"
+            align="center"
+          />
         </div>
 
-        <div className="flex gap-5 justify-center flex-wrap">
+        <div className="flex gap-2 md:gap-4 justify-center flex-wrap">
           {members.map((member) => (
-            <div key={member.id} className="text-center w-[84px]">
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-[60px] h-[60px] rounded-full object-cover mx-auto mb-2 border-[1.5px] border-border"
-              />
-              <p className="text-sm font-semibold text-text">
+            <div key={member.id} className="text-center w-[80px] md:w-[110px]">
+              <div className="h-[80px] md:h-[110px] flex items-end justify-center mb-1.5">
+                <img
+                  src={member.panelImage}
+                  alt={member.name}
+                  className="h-full w-auto object-contain object-bottom"
+                />
+              </div>
+              <p className="text-[13px] font-semibold text-text leading-tight">
                 {member.name}
               </p>
-              <p className="text-[13px] text-text-muted mt-0.5">
+              <p className="text-[11px] text-text-muted mt-0.5">
                 {member.role}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-7">
-          <Link
-            to="/members"
-            className="inline-block bg-cta text-white px-7 py-3 rounded-md text-sm font-semibold"
-          >
+        <div className="text-center mt-10">
+          <Link to="/members" className={buttonClass('primary', 'lg')}>
             メンバーを見る
           </Link>
         </div>

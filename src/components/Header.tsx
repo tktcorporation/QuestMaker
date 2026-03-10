@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from '@tanstack/react-router'
+import { Menu, X } from 'lucide-react'
 import { SocialButton } from './SocialButton'
 
 /**
@@ -28,6 +29,7 @@ export function Header() {
           <nav className="flex gap-6 text-sm text-text-muted">
             <Link
               to="/"
+              className="link-hover"
               activeProps={{ className: 'text-text font-medium' }}
               activeOptions={{ exact: true }}
             >
@@ -35,12 +37,14 @@ export function Header() {
             </Link>
             <Link
               to="/works"
+              className="link-hover"
               activeProps={{ className: 'text-text font-medium' }}
             >
               Works
             </Link>
             <Link
               to="/members"
+              className="link-hover"
               activeProps={{ className: 'text-text font-medium' }}
             >
               Members
@@ -49,11 +53,12 @@ export function Header() {
 
           <div className="w-px h-4 bg-border" />
 
-          <div className="flex gap-2.5">
-            <SocialButton variant="x" href="https://x.com/QuestMaker_" />
+          <div className="flex gap-2">
+            <SocialButton variant="x" href="https://x.com/QuestMaker_" compact />
             <SocialButton
               variant="booth"
               href="https://questmaker.booth.pm/"
+              compact
             />
           </div>
         </div>
@@ -64,18 +69,7 @@ export function Header() {
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? 'メニューを閉じる' : 'メニューを開く'}
         >
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-            {menuOpen ? (
-              <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" />
-            ) : (
-              <path
-                d="M3 5h14M3 10h14M3 15h14"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                fill="none"
-              />
-            )}
-          </svg>
+          {menuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
@@ -106,11 +100,12 @@ export function Header() {
               Members
             </Link>
           </nav>
-          <div className="flex gap-2.5">
-            <SocialButton variant="x" href="https://x.com/QuestMaker_" />
+          <div className="flex gap-2">
+            <SocialButton variant="x" href="https://x.com/QuestMaker_" compact />
             <SocialButton
               variant="booth"
               href="https://questmaker.booth.pm/"
+              compact
             />
           </div>
         </div>

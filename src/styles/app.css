@@ -21,15 +21,44 @@ html {
 
 @theme {
   --font-sans: 'Noto Sans JP', system-ui, -apple-system, sans-serif;
-  --color-bg: #fafafa;
+  --color-bg: #f9f8f7;
   --color-surface: #ffffff;
-  --color-text: #222222;
-  --color-text-muted: #999999;
-  --color-text-subtle: #bbbbbb;
-  --color-accent-green: #5bd88a;
-  --color-accent-blue: #5bb8e8;
-  --color-footer-bg: #f5f5f5;
-  --color-border: #eeeeee;
-  --color-cta: #333333;
+  --color-text: #1f1f1f;
+  --color-text-muted: #7a7672;
+  --color-text-subtle: #a8a29e;
+  --color-accent-green: #4fc882;
+  --color-accent-blue: #4daee0;
+  --color-footer-bg: #f5f4f2;
+  --color-border: #eae8e5;
+  --color-cta: #2d2d2d;
   --color-booth-red: #fc4d50;
+}
+
+/**
+ * インタラクション・マイクロアニメーション。
+ * カード hover で浮遊感、ボタン hover で沈み込みフィードバック。
+ */
+.card-hover {
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.link-hover {
+  transition: color 150ms ease-out;
+}
+.link-hover:hover {
+  color: var(--color-text);
+}
+
+.btn-hover {
+  transition: opacity 150ms ease-out, transform 150ms ease-out;
+}
+.btn-hover:hover {
+  opacity: 0.88;
+}
+.btn-hover:active {
+  transform: scale(0.97);
 }

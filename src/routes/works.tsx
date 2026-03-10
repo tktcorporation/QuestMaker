@@ -6,6 +6,9 @@ import { WorkCard } from '~/components/WorkCard'
 import { works, type WorkCategory } from '~/data/works'
 
 export const Route = createFileRoute('/works')({
+  head: () => ({
+    meta: [{ title: '制作実績 — QuestMaker' }],
+  }),
   component: WorksPage,
 })
 

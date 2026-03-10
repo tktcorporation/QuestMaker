@@ -6,7 +6,8 @@ import { works } from '~/data/works'
  * 最初の実績を大きく、残りを小さく表示。
  */
 export function WorksPreview() {
-  const [featured, ...rest] = works
+  const [featured, ...remaining] = works
+  const rest = remaining.slice(0, 2)
 
   return (
     <section className="px-7 py-12 bg-bg">
@@ -25,9 +26,9 @@ export function WorksPreview() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-[3fr_2fr] gap-2.5">
+        <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-2.5">
           {/* Featured large card */}
-          <div className="row-span-2 bg-surface rounded-[10px] overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+          <div className="md:row-span-2 bg-surface rounded-[10px] overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
             <img
               src={featured.image}
               alt={featured.title}

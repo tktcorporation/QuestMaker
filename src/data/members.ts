@@ -2,7 +2,7 @@ export interface Member {
   id: string
   name: string
   role: string
-  roleLabel: string
+  roleLabel: 'green' | 'blue'
   description: string
   image: string
   xUrl: string

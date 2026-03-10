@@ -65,7 +65,7 @@ export function Header() {
         <button
           className="md:hidden p-2 text-text"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="メニューを開く"
+          aria-label={menuOpen ? 'メニューを閉じる' : 'メニューを開く'}
         >
           <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
             {menuOpen ? (

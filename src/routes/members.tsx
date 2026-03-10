@@ -4,6 +4,9 @@ import { MemberCard } from '~/components/MemberCard'
 import { members } from '~/data/members'
 
 export const Route = createFileRoute('/members')({
+  head: () => ({
+    meta: [{ title: 'メンバー紹介 — QuestMaker' }],
+  }),
   component: MembersPage,
 })
 

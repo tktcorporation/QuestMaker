@@ -15,11 +15,8 @@ export function Footer() {
             <img
               src="/images/QuestMaker_Logo_alpha.png"
               alt="QuestMaker"
-              className="h-10 mb-2"
+              className="h-16"
             />
-            <p className="text-[13px] text-text-subtle">
-              Creative Team for VRChat
-            </p>
           </div>
           <div className="flex flex-col gap-2.5 items-end">
             <SocialButton

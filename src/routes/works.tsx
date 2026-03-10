@@ -7,7 +7,14 @@ import { works, type WorkCategory } from '~/data/works'
 
 export const Route = createFileRoute('/works')({
   head: () => ({
-    meta: [{ title: '制作実績 — QuestMaker' }],
+    meta: [
+      { title: '制作実績 — QuestMaker' },
+      {
+        name: 'description',
+        content: 'QuestMakerの制作実績。VRChat上で制作したワールド・コンテンツを紹介します。',
+      },
+      { property: 'og:title', content: '制作実績 — QuestMaker' },
+    ],
   }),
   component: WorksPage,
 })

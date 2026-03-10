@@ -1,5 +1,5 @@
 import type { Work } from '~/data/works'
-import { ExternalLink } from 'lucide-react'
+import { Globe } from 'lucide-react'
 import { Badge } from '~/components/ui/badge'
 
 interface WorkCardProps {
@@ -43,9 +43,9 @@ export function WorkCard({ work, featured = false }: WorkCardProps) {
             href={work.externalUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 mt-3 text-[13px] text-text-muted link-hover"
+            className="inline-flex items-center justify-center gap-1.5 mt-3 px-3.5 py-1.5 text-[13px] font-medium text-text-muted bg-bg rounded-full border border-border transition-colors duration-150 hover:bg-surface hover:text-text"
           >
-            <ExternalLink size={14} aria-hidden="true" />
+            <Globe size={14} aria-hidden="true" />
             VRChatで見る
           </a>
         )}

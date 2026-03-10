@@ -5,7 +5,14 @@ import { members } from '~/data/members'
 
 export const Route = createFileRoute('/members')({
   head: () => ({
-    meta: [{ title: 'メンバー紹介 — QuestMaker' }],
+    meta: [
+      { title: 'メンバー紹介 — QuestMaker' },
+      {
+        name: 'description',
+        content: 'QuestMakerのメンバー紹介。個性豊かなクリエイターたちが集まって、楽しいコンテンツを作っています。',
+      },
+      { property: 'og:title', content: 'メンバー紹介 — QuestMaker' },
+    ],
   }),
   component: MembersPage,
 })

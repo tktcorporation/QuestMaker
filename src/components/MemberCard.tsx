@@ -1,5 +1,6 @@
 import type { Member } from '~/data/members'
 import { Badge } from '~/components/ui/badge'
+import { XIcon } from '~/components/ui/icons'
 
 /**
  * メンバーカード。2カラムグリッド用の横並びレイアウト。
@@ -56,23 +57,18 @@ export function MemberCard({
         <p className="text-sm text-text-muted leading-[1.7] mt-2">
           {member.description}
         </p>
-        <a
-          href={member.xUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 mt-2 text-[12px] text-text-muted link-hover"
-        >
-          <svg
-            width="12"
-            height="12"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            aria-hidden="true"
+        {/* Xリンク — 右寄せのボタン風 */}
+        <div className="flex justify-end mt-3">
+          <a
+            href={member.xUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 text-[12px] font-medium text-text-muted bg-bg rounded-full border border-border transition-colors duration-150 hover:bg-surface hover:text-text"
           >
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-          </svg>
-          {member.xHandle}
-        </a>
+            <XIcon size={13} className="shrink-0" />
+            {member.xHandle}
+          </a>
+        </div>
       </div>
     </div>
   )

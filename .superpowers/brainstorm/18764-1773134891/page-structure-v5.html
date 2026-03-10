@@ -1,0 +1,182 @@
+<h2>ページ設計 v5 — ソーシャル目立たせ + モックアップ要素取り込み</h2>
+<p class="subtitle">v4ベースにヒーロー画像・ソーシャルリンクを強化</p>
+
+<!-- ===== トップページ ===== -->
+<div class="section">
+  <h3>トップページ (index.tsx)</h3>
+  <div class="mockup">
+    <div class="mockup-header">トップページ — v5</div>
+    <div class="mockup-body" style="background:#fafafa;color:#1a1a1a;font-family:system-ui,-apple-system,sans-serif;">
+
+      <!-- Nav: ロゴ + ナビ + ソーシャル -->
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 28px;background:#fff;border-bottom:1px solid #eee;">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div style="width:32px;height:32px;background:linear-gradient(135deg,#5bd88a,#5bb8e8);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff;">QM</div>
+          <div style="font-size:15px;font-weight:700;letter-spacing:-0.02em;color:#333;">QuestMaker</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:24px;">
+          <div style="display:flex;gap:20px;font-size:13px;color:#999;">
+            <span style="color:#333;font-weight:500;">Top</span>
+            <span>Works</span>
+            <span>Members</span>
+          </div>
+          <div style="width:1px;height:16px;background:#e0e0e0;"></div>
+          <div style="display:flex;gap:10px;">
+            <div style="background:#222;color:#fff;padding:5px 12px;border-radius:5px;font-size:11px;font-weight:500;display:flex;align-items:center;gap:4px;">𝕏</div>
+            <div style="background:#fc4d50;color:#fff;padding:5px 12px;border-radius:5px;font-size:11px;font-weight:500;">BOOTH</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero: header.png 画像エリア（モックアップから取り込み） -->
+      <div style="background:linear-gradient(135deg,#e8f5ee,#e5f0fa);padding:0;position:relative;overflow:hidden;">
+        <div style="padding:48px 20px;text-align:center;font-size:10px;color:#aaa;">
+          <div style="border:2px dashed #ccc;border-radius:8px;padding:40px 20px;">
+            header.png — ヒーロー画像<br>
+            <span style="font-size:9px;">aspect-ratio: 3/1, background-size: cover</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mission statement（モックアップのメインメッセージ） -->
+      <div style="padding:48px 28px 40px;background:#fff;text-align:center;">
+        <div style="font-size:24px;font-weight:800;line-height:1.45;letter-spacing:-0.02em;color:#222;margin-bottom:14px;">
+          PCとQuestの垣根をなくし、<br>みんなで一緒に楽しめる<br>世界をつくりたい
+        </div>
+        <div style="font-size:13px;color:#888;line-height:1.8;margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto;">
+          そんな思いを胸に集まった仲間たちで結成したVRChatのクリエイターチームです。<br>プラットフォームの壁を越えて「みんなで仲良く」楽しめるコンテンツを制作しています！
+        </div>
+        <div style="display:flex;gap:10px;justify-content:center;">
+          <div style="background:#333;color:#fff;padding:11px 24px;border-radius:6px;font-size:13px;font-weight:600;">実績を見る</div>
+          <div style="border:1px solid #ddd;color:#555;padding:11px 24px;border-radius:6px;font-size:13px;">お問い合わせ</div>
+        </div>
+      </div>
+
+      <!-- Works プレビュー -->
+      <div style="padding:48px 28px;background:#fafafa;">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:24px;">
+          <div>
+            <div style="font-size:10px;letter-spacing:3px;color:#5bb8e8;margin-bottom:4px;font-weight:600;">WORKS</div>
+            <div style="font-size:20px;font-weight:700;letter-spacing:-0.02em;color:#222;">制作実績</div>
+          </div>
+          <div style="font-size:12px;color:#999;">すべて見る →</div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:3fr 2fr;gap:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;grid-row:span 2;box-shadow:0 1px 3px rgba(0,0,0,0.04);">
+            <div style="background:#f0f0f0;padding:56px 16px;text-align:center;font-size:9px;color:#aaa;">achievement1.webp</div>
+            <div style="padding:18px;">
+              <div style="font-size:10px;color:#5bd88a;margin-bottom:6px;font-weight:600;">Live World</div>
+              <div style="font-size:14px;font-weight:600;line-height:1.4;color:#222;">QuestMaker feat.<br>サンリオキャラクターズ</div>
+              <div style="font-size:11px;color:#999;margin-top:6px;">サンリオキャラたちのライブステージ</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.04);">
+            <div style="background:#f0f0f0;padding:28px 12px;text-align:center;font-size:9px;color:#aaa;">achievement2.webp</div>
+            <div style="padding:14px;">
+              <div style="font-size:10px;color:#5bb8e8;margin-bottom:4px;font-weight:600;">Game World</div>
+              <div style="font-size:13px;font-weight:600;color:#222;">めたモグ</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.04);">
+            <div style="background:#f0f0f0;padding:28px 12px;text-align:center;font-size:9px;color:#aaa;">achievement3.webp</div>
+            <div style="padding:14px;">
+              <div style="font-size:10px;color:#5bd88a;margin-bottom:4px;font-weight:600;">Live World</div>
+              <div style="font-size:13px;font-weight:600;color:#222;">SHOW BY ROCK!!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Members プレビュー（モックアップ踏襲: シンプルな紹介 + CTA） -->
+      <div style="padding:48px 28px;background:#fff;">
+        <div style="text-align:center;margin-bottom:28px;">
+          <div style="font-size:10px;letter-spacing:3px;color:#5bd88a;margin-bottom:4px;font-weight:600;">MEMBERS</div>
+          <div style="font-size:20px;font-weight:700;letter-spacing:-0.02em;color:#222;">QuestMakerのメンバー</div>
+          <div style="font-size:13px;color:#888;margin-top:8px;">個性豊かなクリエイターたちが集まって、楽しいワールドを作っています！</div>
+        </div>
+
+        <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;">
+          <div style="text-align:center;width:72px;">
+            <div style="width:52px;height:52px;border-radius:50%;background:#f0f0f0;margin:0 auto 8px;border:1.5px solid #e8e8e8;"></div>
+            <div style="font-size:11px;font-weight:600;color:#333;">あの子</div>
+            <div style="font-size:9px;color:#999;margin-top:2px;">Director</div>
+          </div>
+          <div style="text-align:center;width:72px;">
+            <div style="width:52px;height:52px;border-radius:50%;background:#f0f0f0;margin:0 auto 8px;border:1.5px solid #e8e8e8;"></div>
+            <div style="font-size:11px;font-weight:600;color:#333;">やっさん</div>
+            <div style="font-size:9px;color:#999;margin-top:2px;">VFX</div>
+          </div>
+          <div style="text-align:center;width:72px;">
+            <div style="width:52px;height:52px;border-radius:50%;background:#f0f0f0;margin:0 auto 8px;border:1.5px solid #e8e8e8;"></div>
+            <div style="font-size:11px;font-weight:600;color:#333;">元怒</div>
+            <div style="font-size:9px;color:#999;margin-top:2px;">3D</div>
+          </div>
+          <div style="text-align:center;width:72px;">
+            <div style="width:52px;height:52px;border-radius:50%;background:#f0f0f0;margin:0 auto 8px;border:1.5px solid #e8e8e8;"></div>
+            <div style="font-size:11px;font-weight:600;color:#333;">Mosco</div>
+            <div style="font-size:9px;color:#999;margin-top:2px;">Sound</div>
+          </div>
+          <div style="text-align:center;width:72px;">
+            <div style="width:52px;height:52px;border-radius:50%;background:#f0f0f0;margin:0 auto 8px;border:1.5px solid #e8e8e8;"></div>
+            <div style="font-size:11px;font-weight:600;color:#333;">たろー</div>
+            <div style="font-size:9px;color:#999;margin-top:2px;">2D</div>
+          </div>
+          <div style="text-align:center;width:72px;">
+            <div style="width:52px;height:52px;border-radius:50%;background:#f0f0f0;margin:0 auto 8px;border:1.5px solid #e8e8e8;"></div>
+            <div style="font-size:11px;font-weight:600;color:#333;">tkt</div>
+            <div style="font-size:9px;color:#999;margin-top:2px;">Tech</div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:28px;">
+          <div style="display:inline-block;background:#333;color:#fff;padding:10px 24px;border-radius:6px;font-size:13px;font-weight:600;">メンバーを見る</div>
+        </div>
+      </div>
+
+      <!-- Footer: ソーシャルリンクを目立たせる -->
+      <div style="padding:32px 28px;background:#f5f5f5;border-top:1px solid #eee;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+          <div>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+              <div style="width:24px;height:24px;background:linear-gradient(135deg,#5bd88a,#5bb8e8);border-radius:50%;"></div>
+              <div style="font-size:13px;font-weight:700;color:#333;">QuestMaker</div>
+            </div>
+            <div style="font-size:10px;color:#aaa;">Creative Team for VRChat</div>
+          </div>
+          <!-- ソーシャル: ボタンスタイルで目立たせる -->
+          <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-end;">
+            <div style="background:#222;color:#fff;padding:6px 14px;border-radius:5px;font-size:11px;font-weight:500;display:flex;align-items:center;gap:6px;">𝕏 <span style="opacity:0.7;">@QuestMaker_</span></div>
+            <div style="background:#fc4d50;color:#fff;padding:6px 14px;border-radius:5px;font-size:11px;font-weight:500;">BOOTH ショップ</div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:20px;font-size:10px;color:#ccc;">&copy; 2026 QuestMaker. All rights reserved.</div>
+      </div>
+
+    </div>
+  </div>
+  <div style="margin-top:12px;">
+    <span class="label">v4 → v5 変更点:</span>
+    <ul style="font-size:12px;line-height:2;margin-top:6px;">
+      <li><strong>ヒーロー画像復活</strong> — モックアップの header.png を画面幅いっぱいに配置</li>
+      <li><strong>ミッション文を画像直下に</strong> — 画像で世界観 → テキストで具体化の流れ</li>
+      <li><strong>ナビバーにX・BOOTHボタン</strong> — 常時表示でどのページからもアクセス可能</li>
+      <li><strong>フッターにもX・BOOTH</strong> — ボタンスタイルで視認性確保</li>
+      <li><strong>ミッション文はモックアップの原文を採用</strong> — 「そんな思いを胸に集まった仲間たちで...」</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== 実績・メンバーページはv4と同構成、ナビとフッターのみ更新 ===== -->
+<div class="section">
+  <h3>実績・メンバーページ</h3>
+  <p style="font-size:13px;color:#888;">v4 のレイアウトを維持。変更はナビバーとフッターのソーシャルリンク強化のみ。</p>
+  <div style="background:#fff;border-radius:8px;padding:16px;margin-top:8px;border:1px solid #e0e0e0;">
+    <div style="font-size:12px;color:#555;line-height:1.8;">
+      <strong>共通の変更:</strong><br>
+      ・ナビバー右端に X / BOOTH ボタンを常設<br>
+      ・フッターに X / BOOTH ボタン（ナビと同デザイン）<br>
+      ・メンバーページの Social links セクション（@QuestMaker_ テキストリンク）は削除 → ナビ＆フッターに集約
+    </div>
+  </div>
+</div>

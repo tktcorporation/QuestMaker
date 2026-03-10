@@ -1,0 +1,309 @@
+<h2>ページ設計 v2 — プロ品質の構成</h2>
+<p class="subtitle">VTuber事務所 × テック企業のデザインパターンを融合</p>
+
+<!-- ===== トップページ ===== -->
+<div class="section">
+  <h3>トップページ (index.tsx)</h3>
+  <div class="mockup">
+    <div class="mockup-header">トップページ — フルレイアウト</div>
+    <div class="mockup-body" style="background:#0a0a1a;color:white;">
+
+      <!-- Nav -->
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:rgba(10,10,26,0.9);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,0.08);">
+        <div style="font-size:18px;font-weight:bold;"><span style="color:#01E246;">Quest</span><span style="color:#00A8FB;">Maker</span></div>
+        <div style="display:flex;gap:20px;font-size:13px;color:rgba(255,255,255,0.7);">
+          <span style="color:white;font-weight:600;">Top</span>
+          <span>Works</span>
+          <span>Members</span>
+        </div>
+      </div>
+
+      <!-- Hero: フルスクリーン ミッション + ビジュアル -->
+      <div style="position:relative;padding:80px 24px;text-align:center;background:linear-gradient(135deg,#0a0a2e 0%,#1a0a3e 50%,#0a1a3e 100%);overflow:hidden;">
+        <div style="position:absolute;top:20px;right:30px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(1,226,70,0.15),transparent);filter:blur(30px);"></div>
+        <div style="position:absolute;bottom:20px;left:30px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(0,168,251,0.15),transparent);filter:blur(30px);"></div>
+
+        <div style="font-size:11px;letter-spacing:4px;color:rgba(255,255,255,0.4);margin-bottom:16px;">CREATIVE TEAM FOR VRChat</div>
+        <div style="font-size:24px;font-weight:800;line-height:1.4;margin-bottom:12px;">
+          PCとQuestの垣根をなくし、<br>
+          <span style="background:linear-gradient(90deg,#01E246,#00A8FB);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">みんなで一緒に楽しめる</span><br>
+          世界をつくりたい
+        </div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.6);max-width:400px;margin:0 auto 24px;line-height:1.7;">
+          プラットフォームの壁を越えて「みんなで仲良く」楽しめるコンテンツを制作するクリエイターチームです
+        </div>
+        <div style="display:flex;gap:12px;justify-content:center;">
+          <div style="background:linear-gradient(135deg,#01E246,#00A8FB);color:white;padding:10px 24px;border-radius:8px;font-size:13px;font-weight:600;">Works を見る</div>
+          <div style="border:1px solid rgba(255,255,255,0.2);color:white;padding:10px 24px;border-radius:8px;font-size:13px;">Contact</div>
+        </div>
+      </div>
+
+      <!-- Works プレビュー: Bento グリッド -->
+      <div style="padding:40px 24px;background:#0d0d20;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+          <div>
+            <div style="font-size:11px;letter-spacing:3px;color:#01E246;margin-bottom:4px;">WORKS</div>
+            <div style="font-size:18px;font-weight:700;">制作実績</div>
+          </div>
+          <div style="font-size:12px;color:#00A8FB;cursor:pointer;">すべて見る →</div>
+        </div>
+
+        <!-- Bento Grid -->
+        <div style="display:grid;grid-template-columns:2fr 1fr;grid-template-rows:auto auto;gap:12px;">
+          <!-- Large card -->
+          <div style="background:linear-gradient(135deg,#1a1a3e,#2a1a4e);border-radius:12px;padding:20px;grid-row:span 2;display:flex;flex-direction:column;justify-content:flex-end;min-height:180px;border:1px solid rgba(255,255,255,0.06);">
+            <span style="background:rgba(1,226,70,0.15);color:#01E246;font-size:10px;padding:3px 8px;border-radius:4px;display:inline-block;width:fit-content;margin-bottom:8px;">LIVE WORLD</span>
+            <div style="font-size:15px;font-weight:700;">QuestMaker feat.<br>サンリオキャラクターズ</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:4px;">サンリオキャラたちのライブステージ</div>
+          </div>
+          <!-- Small cards -->
+          <div style="background:linear-gradient(135deg,#1a1a3e,#1a2a4e);border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.06);">
+            <span style="background:rgba(0,168,251,0.15);color:#00A8FB;font-size:10px;padding:3px 8px;border-radius:4px;display:inline-block;margin-bottom:8px;">GAME WORLD</span>
+            <div style="font-size:13px;font-weight:600;">めたモグ</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.5);margin-top:2px;">育成ゲームワールド</div>
+          </div>
+          <div style="background:linear-gradient(135deg,#1a1a3e,#2a1a3e);border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.06);">
+            <span style="background:rgba(1,226,70,0.15);color:#01E246;font-size:10px;padding:3px 8px;border-radius:4px;display:inline-block;margin-bottom:8px;">LIVE WORLD</span>
+            <div style="font-size:13px;font-weight:600;">SHOW BY ROCK!!</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.5);margin-top:2px;">ライブ演出</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Members プレビュー -->
+      <div style="padding:40px 24px;background:#0a0a1a;">
+        <div style="text-align:center;margin-bottom:24px;">
+          <div style="font-size:11px;letter-spacing:3px;color:#00A8FB;margin-bottom:4px;">MEMBERS</div>
+          <div style="font-size:18px;font-weight:700;">チームメンバー</div>
+        </div>
+
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <div style="text-align:center;width:70px;">
+            <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#01E246,#00A8FB);margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-size:10px;padding:2px;">IMG</div>
+            <div style="font-size:11px;font-weight:600;">あの子</div>
+            <div style="font-size:9px;color:rgba(255,255,255,0.4);">Director</div>
+          </div>
+          <div style="text-align:center;width:70px;">
+            <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#2a1a4e,#1a2a4e);margin:0 auto 6px;border:2px solid rgba(255,255,255,0.1);"></div>
+            <div style="font-size:11px;font-weight:600;">やっさん</div>
+            <div style="font-size:9px;color:rgba(255,255,255,0.4);">VFX</div>
+          </div>
+          <div style="text-align:center;width:70px;">
+            <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#2a1a4e,#1a2a4e);margin:0 auto 6px;border:2px solid rgba(255,255,255,0.1);"></div>
+            <div style="font-size:11px;font-weight:600;">元怒</div>
+            <div style="font-size:9px;color:rgba(255,255,255,0.4);">3D</div>
+          </div>
+          <div style="text-align:center;width:70px;">
+            <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#2a1a4e,#1a2a4e);margin:0 auto 6px;border:2px solid rgba(255,255,255,0.1);"></div>
+            <div style="font-size:11px;font-weight:600;">Mosco</div>
+            <div style="font-size:9px;color:rgba(255,255,255,0.4);">Sound</div>
+          </div>
+          <div style="text-align:center;width:70px;">
+            <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#2a1a4e,#1a2a4e);margin:0 auto 6px;border:2px solid rgba(255,255,255,0.1);"></div>
+            <div style="font-size:11px;font-weight:600;">たろー</div>
+            <div style="font-size:9px;color:rgba(255,255,255,0.4);">2D</div>
+          </div>
+          <div style="text-align:center;width:70px;">
+            <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#2a1a4e,#1a2a4e);margin:0 auto 6px;border:2px solid rgba(255,255,255,0.1);"></div>
+            <div style="font-size:11px;font-weight:600;">tkt</div>
+            <div style="font-size:9px;color:rgba(255,255,255,0.4);">Tech</div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:20px;">
+          <div style="display:inline-block;border:1px solid rgba(255,255,255,0.15);color:white;padding:8px 20px;border-radius:8px;font-size:12px;">メンバーを見る →</div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div style="padding:24px;background:#050510;border-top:1px solid rgba(255,255,255,0.06);">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <div style="font-size:14px;font-weight:bold;margin-bottom:4px;"><span style="color:#01E246;">Quest</span><span style="color:#00A8FB;">Maker</span></div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.3);">Creative Team for VRChat</div>
+          </div>
+          <div style="display:flex;gap:12px;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:10px;">X</div>
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:10px;">B</div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:16px;font-size:10px;color:rgba(255,255,255,0.2);">&copy; 2026 QuestMaker</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="margin-top:12px;">
+    <span class="label">デザイン特徴:</span>
+    <ul style="font-size:13px;margin-top:4px;line-height:1.8;">
+      <li><strong>ダークテーマ</strong> — VR/ゲーム系の世界観に合うダーク基調</li>
+      <li><strong>グラデーションアクセント</strong> — ブランドカラー緑→青のグラデーションを要所に</li>
+      <li><strong>Bentoグリッド</strong> — 実績カードを非対称グリッドで視覚的リズムを作る</li>
+      <li><strong>ミッションファースト</strong> — Meta式にまず「なぜ」から入るヒーロー</li>
+      <li><strong>グラスモーフィズム風ナビ</strong> — backdrop-filter でスクロール時に透過</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== 実績ページ ===== -->
+<div class="section">
+  <h3>実績ページ (works.tsx)</h3>
+  <div class="mockup">
+    <div class="mockup-header">Works ページ</div>
+    <div class="mockup-body" style="background:#0a0a1a;color:white;">
+
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:rgba(10,10,26,0.9);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,0.08);">
+        <div style="font-size:18px;font-weight:bold;"><span style="color:#01E246;">Quest</span><span style="color:#00A8FB;">Maker</span></div>
+        <div style="display:flex;gap:20px;font-size:13px;color:rgba(255,255,255,0.7);">
+          <span>Top</span>
+          <span style="color:white;font-weight:600;">Works</span>
+          <span>Members</span>
+        </div>
+      </div>
+
+      <!-- Page Hero -->
+      <div style="padding:48px 24px;text-align:center;background:linear-gradient(180deg,#0a0a2e,#0d0d20);">
+        <div style="font-size:11px;letter-spacing:3px;color:#01E246;margin-bottom:8px;">WORKS</div>
+        <div style="font-size:22px;font-weight:800;">制作実績</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-top:8px;">VRChat上で制作したワールド・コンテンツの実績をご紹介します</div>
+      </div>
+
+      <!-- Filter tags -->
+      <div style="padding:0 24px 20px;display:flex;gap:8px;justify-content:center;">
+        <span style="background:rgba(255,255,255,0.1);padding:5px 14px;border-radius:20px;font-size:11px;">All</span>
+        <span style="background:rgba(1,226,70,0.15);color:#01E246;padding:5px 14px;border-radius:20px;font-size:11px;">Live</span>
+        <span style="background:rgba(0,168,251,0.15);color:#00A8FB;padding:5px 14px;border-radius:20px;font-size:11px;">Game</span>
+      </div>
+
+      <!-- Works grid -->
+      <div style="padding:0 24px 40px;display:flex;flex-direction:column;gap:16px;">
+        <div style="background:rgba(255,255,255,0.03);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);">
+          <div style="background:linear-gradient(135deg,#1a1a3e,#2a1a4e);padding:60px 20px;text-align:center;font-size:10px;color:rgba(255,255,255,0.3);">achievement1.webp — フルワイド画像</div>
+          <div style="padding:20px;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="background:rgba(1,226,70,0.15);color:#01E246;font-size:10px;padding:3px 8px;border-radius:4px;">LIVE WORLD</span>
+            </div>
+            <div style="font-size:16px;font-weight:700;margin-bottom:6px;">QuestMaker featuring サンリオキャラクターズ</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.6;margin-bottom:12px;">"みんな仲良く"楽しいライブ！サンリオキャラクターズが歌って、踊って、会場をひとつに。</div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:rgba(255,255,255,0.03);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);">
+            <div style="background:linear-gradient(135deg,#1a2a4e,#1a1a3e);padding:40px 12px;text-align:center;font-size:9px;color:rgba(255,255,255,0.3);">achievement2.webp</div>
+            <div style="padding:14px;">
+              <span style="background:rgba(0,168,251,0.15);color:#00A8FB;font-size:9px;padding:2px 6px;border-radius:4px;">GAME</span>
+              <div style="font-size:13px;font-weight:600;margin-top:6px;">めたモグ</div>
+              <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:2px;">育成ゲームワールド</div>
+            </div>
+          </div>
+          <div style="background:rgba(255,255,255,0.03);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);">
+            <div style="background:linear-gradient(135deg,#2a1a3e,#1a1a3e);padding:40px 12px;text-align:center;font-size:9px;color:rgba(255,255,255,0.3);">achievement3.webp</div>
+            <div style="padding:14px;">
+              <span style="background:rgba(1,226,70,0.15);color:#01E246;font-size:9px;padding:2px 6px;border-radius:4px;">LIVE</span>
+              <div style="font-size:13px;font-weight:600;margin-top:6px;">SHOW BY ROCK!!</div>
+              <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:2px;">ライブ演出</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding:24px;background:#050510;text-align:center;font-size:10px;color:rgba(255,255,255,0.2);">&copy; 2026 QuestMaker</div>
+    </div>
+  </div>
+  <div style="margin-top:12px;">
+    <span class="label">特徴:</span> フィルタータグでカテゴリ切替、最新実績をフィーチャーカード（大）で目立たせ、残りをグリッド配置
+  </div>
+</div>
+
+<!-- ===== メンバーページ ===== -->
+<div class="section">
+  <h3>メンバーページ (members.tsx)</h3>
+  <div class="mockup">
+    <div class="mockup-header">Members ページ</div>
+    <div class="mockup-body" style="background:#0a0a1a;color:white;">
+
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:rgba(10,10,26,0.9);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,0.08);">
+        <div style="font-size:18px;font-weight:bold;"><span style="color:#01E246;">Quest</span><span style="color:#00A8FB;">Maker</span></div>
+        <div style="display:flex;gap:20px;font-size:13px;color:rgba(255,255,255,0.7);">
+          <span>Top</span>
+          <span>Works</span>
+          <span style="color:white;font-weight:600;">Members</span>
+        </div>
+      </div>
+
+      <!-- Page Hero -->
+      <div style="padding:48px 24px;text-align:center;background:linear-gradient(180deg,#0a0a2e,#0d0d20);">
+        <div style="font-size:11px;letter-spacing:3px;color:#00A8FB;margin-bottom:8px;">MEMBERS</div>
+        <div style="font-size:22px;font-weight:800;">メンバー紹介</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-top:8px;">個性豊かなクリエイターたちが集まって、楽しいワールドを作っています</div>
+      </div>
+
+      <!-- Social links bar -->
+      <div style="display:flex;justify-content:center;gap:12px;padding:0 24px 24px;">
+        <div style="display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);padding:8px 16px;border-radius:8px;font-size:11px;">
+          <span style="opacity:0.6;">X</span> @QuestMaker_
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);padding:8px 16px;border-radius:8px;font-size:11px;">
+          <span style="color:#fc4d50;">●</span> BOOTH
+        </div>
+      </div>
+
+      <!-- Member cards -->
+      <div style="padding:0 24px 40px;display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div style="background:rgba(255,255,255,0.03);border-radius:12px;padding:20px;text-align:center;border:1px solid rgba(255,255,255,0.06);">
+          <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#01E246,#00A8FB);margin:0 auto 10px;"></div>
+          <div style="font-size:14px;font-weight:700;">あの子</div>
+          <div style="font-size:10px;color:#01E246;margin:4px 0 8px;">Director</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.4);line-height:1.5;">代表・ディレクター。<br>『題名のないお茶会』主催</div>
+          <div style="margin-top:10px;font-size:10px;color:rgba(255,255,255,0.3);border-top:1px solid rgba(255,255,255,0.06);padding-top:8px;">@veoxxxxxx</div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.03);border-radius:12px;padding:20px;text-align:center;border:1px solid rgba(255,255,255,0.06);">
+          <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#2a1a4e,#1a2a4e);margin:0 auto 10px;border:2px solid rgba(255,255,255,0.1);"></div>
+          <div style="font-size:14px;font-weight:700;">やっさん</div>
+          <div style="font-size:10px;color:#00A8FB;margin:4px 0 8px;">VFX / Particles</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.4);line-height:1.5;">ワールドギミック・<br>パーティクル演出担当</div>
+          <div style="margin-top:10px;font-size:10px;color:rgba(255,255,255,0.3);border-top:1px solid rgba(255,255,255,0.06);padding-top:8px;">@yassann357</div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.03);border-radius:12px;padding:20px;text-align:center;border:1px solid rgba(255,255,255,0.06);">
+          <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#2a1a4e,#1a2a4e);margin:0 auto 10px;border:2px solid rgba(255,255,255,0.1);"></div>
+          <div style="font-size:14px;font-weight:700;">元怒</div>
+          <div style="font-size:10px;color:#01E246;margin:4px 0 8px;">3D / Animation</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.4);line-height:1.5;">モデリング・<br>アニメーション全般</div>
+          <div style="margin-top:10px;font-size:10px;color:rgba(255,255,255,0.3);border-top:1px solid rgba(255,255,255,0.06);padding-top:8px;">@gend_VR</div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.03);border-radius:12px;padding:20px;text-align:center;border:1px solid rgba(255,255,255,0.06);">
+          <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#2a1a4e,#1a2a4e);margin:0 auto 10px;border:2px solid rgba(255,255,255,0.1);"></div>
+          <div style="font-size:14px;font-weight:700;">Mosco</div>
+          <div style="font-size:10px;color:#00A8FB;margin:4px 0 8px;">Sound</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.4);line-height:1.5;">MIX・SE・<br>効果音などの音響</div>
+          <div style="margin-top:10px;font-size:10px;color:rgba(255,255,255,0.3);border-top:1px solid rgba(255,255,255,0.06);padding-top:8px;">@Mosco_Japan</div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.03);border-radius:12px;padding:20px;text-align:center;border:1px solid rgba(255,255,255,0.06);">
+          <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#2a1a4e,#1a2a4e);margin:0 auto 10px;border:2px solid rgba(255,255,255,0.1);"></div>
+          <div style="font-size:14px;font-weight:700;">たろー</div>
+          <div style="font-size:10px;color:#01E246;margin:4px 0 8px;">2D Design</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.4);line-height:1.5;">バナー・イラスト・<br>テクスチャ等のデザイン</div>
+          <div style="margin-top:10px;font-size:10px;color:rgba(255,255,255,0.3);border-top:1px solid rgba(255,255,255,0.06);padding-top:8px;">@Taro3_taro</div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.03);border-radius:12px;padding:20px;text-align:center;border:1px solid rgba(255,255,255,0.06);">
+          <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#2a1a4e,#1a2a4e);margin:0 auto 10px;border:2px solid rgba(255,255,255,0.1);"></div>
+          <div style="font-size:14px;font-weight:700;">tkt</div>
+          <div style="font-size:10px;color:#00A8FB;margin:4px 0 8px;">Tech Lead</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.4);line-height:1.5;">スケジュール管理・<br>技術フォロー</div>
+          <div style="margin-top:10px;font-size:10px;color:rgba(255,255,255,0.3);border-top:1px solid rgba(255,255,255,0.06);padding-top:8px;">@tktcorporation</div>
+        </div>
+      </div>
+
+      <div style="padding:24px;background:#050510;text-align:center;font-size:10px;color:rgba(255,255,255,0.2);">&copy; 2026 QuestMaker</div>
+    </div>
+  </div>
+  <div style="margin-top:12px;">
+    <span class="label">特徴:</span> 役割を英語ラベルで明示、カードにホバーエフェクト（実装時）、SNSリンクは控えめに配置
+  </div>
+</div>

@@ -1,0 +1,170 @@
+<h2>ページ構成 & コンポーネント設計</h2>
+<p class="subtitle">各ページのセクション構成とコンポーネントの対応</p>
+
+<div class="section">
+  <h3>トップページ (index.tsx)</h3>
+  <div class="mockup">
+    <div class="mockup-header">トップページ ワイヤーフレーム</div>
+    <div class="mockup-body">
+      <div class="mock-nav" style="display:flex;justify-content:space-between;align-items:center;padding:12px 20px;">
+        <div><span style="color:#01E246;font-weight:bold;">Quest</span><span style="color:#00A8FB;font-weight:bold;">Maker</span></div>
+        <div style="display:flex;gap:16px;font-size:14px;">
+          <span style="font-weight:bold;">トップ</span>
+          <span style="opacity:0.6;">実績</span>
+          <span style="opacity:0.6;">メンバー・連絡先</span>
+        </div>
+      </div>
+
+      <div style="background:linear-gradient(135deg,#0a0a2e,#1a1a4e);padding:60px 20px;text-align:center;color:white;">
+        <div style="font-size:10px;letter-spacing:2px;opacity:0.7;margin-bottom:8px;">HERO IMAGE AREA</div>
+        <div style="font-size:11px;opacity:0.5;">header.png をフルワイド背景表示</div>
+      </div>
+
+      <div style="background:#f8f9fa;padding:30px 20px;text-align:center;">
+        <div style="font-size:16px;font-weight:bold;margin-bottom:8px;">PCとQuestの垣根をなくし、<br>みんなで一緒に楽しめる世界をつくりたい</div>
+        <div style="font-size:12px;opacity:0.7;margin-bottom:12px;">クリエイターチームの紹介テキスト</div>
+        <div style="display:inline-block;background:#00A8FB;color:white;padding:6px 16px;border-radius:4px;font-size:12px;">実績を見る</div>
+      </div>
+
+      <div style="padding:20px;text-align:center;">
+        <div style="font-size:14px;font-weight:bold;margin-bottom:8px;">QuestMakerのメンバー</div>
+        <div style="font-size:12px;opacity:0.7;margin-bottom:12px;">個性豊かなクリエイターたちが集まって...</div>
+        <div style="display:inline-block;background:#00A8FB;color:white;padding:6px 16px;border-radius:4px;font-size:12px;">メンバーを見る</div>
+      </div>
+
+      <div style="background:#A0EFFC;padding:12px;text-align:center;font-size:11px;color:#7C8AA9;">
+        &copy; 2026 QuestMaker
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:12px;">
+    <span class="label">コンポーネント:</span>
+    <code>Header</code> → <code>HeroSection</code> → <code>MissionStatement</code> → <code>MemberPreview</code> → <code>Footer</code>
+  </div>
+</div>
+
+<div class="section">
+  <h3>実績ページ (achievements.tsx)</h3>
+  <div class="mockup">
+    <div class="mockup-header">実績ページ ワイヤーフレーム</div>
+    <div class="mockup-body">
+      <div class="mock-nav" style="display:flex;justify-content:space-between;align-items:center;padding:12px 20px;">
+        <div><span style="color:#01E246;font-weight:bold;">Quest</span><span style="color:#00A8FB;font-weight:bold;">Maker</span></div>
+        <div style="display:flex;gap:16px;font-size:14px;">
+          <span style="opacity:0.6;">トップ</span>
+          <span style="font-weight:bold;">実績</span>
+          <span style="opacity:0.6;">メンバー・連絡先</span>
+        </div>
+      </div>
+
+      <div style="background:linear-gradient(to bottom,rgba(0,0,0,0.3),rgba(0,0,0,0.7)),linear-gradient(135deg,#0a0a2e,#1a1a4e);padding:40px 20px;text-align:center;color:white;">
+        <div style="font-size:18px;font-weight:bold;">実績紹介</div>
+        <div style="font-size:12px;opacity:0.8;">これまでの主な実績をご紹介します</div>
+      </div>
+
+      <div style="padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div style="border:1px solid #ddd;border-radius:8px;overflow:hidden;">
+          <div style="background:#e0e0e0;padding:30px;text-align:center;font-size:10px;color:#666;">achievement1.webp</div>
+          <div style="padding:12px;">
+            <span style="background:#198754;color:white;font-size:10px;padding:2px 6px;border-radius:3px;">ライブワールド</span>
+            <div style="font-size:13px;font-weight:bold;margin-top:6px;">サンリオキャラクターズ</div>
+            <div style="font-size:11px;opacity:0.7;margin-top:4px;">説明テキスト...</div>
+          </div>
+        </div>
+        <div style="border:1px solid #ddd;border-radius:8px;overflow:hidden;">
+          <div style="background:#e0e0e0;padding:30px;text-align:center;font-size:10px;color:#666;">achievement2.webp</div>
+          <div style="padding:12px;">
+            <span style="background:#0d6efd;color:white;font-size:10px;padding:2px 6px;border-radius:3px;">育成ゲームワールド</span>
+            <div style="font-size:13px;font-weight:bold;margin-top:6px;">めたモグ</div>
+            <div style="font-size:11px;opacity:0.7;margin-top:4px;">説明テキスト...</div>
+          </div>
+        </div>
+        <div style="border:1px solid #ddd;border-radius:8px;overflow:hidden;">
+          <div style="background:#e0e0e0;padding:30px;text-align:center;font-size:10px;color:#666;">achievement3.webp</div>
+          <div style="padding:12px;">
+            <span style="background:#198754;color:white;font-size:10px;padding:2px 6px;border-radius:3px;">ライブワールド</span>
+            <div style="font-size:13px;font-weight:bold;margin-top:6px;">SHOW BY ROCK!!</div>
+            <div style="font-size:11px;opacity:0.7;margin-top:4px;">説明テキスト...</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#A0EFFC;padding:12px;text-align:center;font-size:11px;color:#7C8AA9;">
+        &copy; 2026 QuestMaker
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:12px;">
+    <span class="label">コンポーネント:</span>
+    <code>Header</code> → <code>PageHeader</code> → <code>AchievementCard[]</code> → <code>Footer</code>
+  </div>
+</div>
+
+<div class="section">
+  <h3>メンバー・連絡先ページ (members.tsx)</h3>
+  <div class="mockup">
+    <div class="mockup-header">メンバーページ ワイヤーフレーム</div>
+    <div class="mockup-body">
+      <div class="mock-nav" style="display:flex;justify-content:space-between;align-items:center;padding:12px 20px;">
+        <div><span style="color:#01E246;font-weight:bold;">Quest</span><span style="color:#00A8FB;font-weight:bold;">Maker</span></div>
+        <div style="display:flex;gap:16px;font-size:14px;">
+          <span style="opacity:0.6;">トップ</span>
+          <span style="opacity:0.6;">実績</span>
+          <span style="font-weight:bold;">メンバー・連絡先</span>
+        </div>
+      </div>
+
+      <div style="background:linear-gradient(to bottom,rgba(0,0,0,0.3),rgba(0,0,0,0.7)),linear-gradient(135deg,#0a0a2e,#1a1a4e);padding:40px 20px;text-align:center;color:white;">
+        <div style="font-size:18px;font-weight:bold;">メンバー紹介</div>
+        <div style="font-size:12px;opacity:0.8;">私たちのチームをご紹介します</div>
+      </div>
+
+      <div style="padding:20px;text-align:center;">
+        <div style="display:flex;justify-content:center;gap:8px;margin-bottom:16px;">
+          <span style="background:#1da1f2;color:white;padding:6px 12px;border-radius:4px;font-size:11px;">X @QuestMaker_</span>
+          <span style="background:#dc3545;color:white;padding:6px 12px;border-radius:4px;font-size:11px;">BOOTH ショップ</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+          <div style="border:1px solid #ddd;border-radius:8px;padding:16px;text-align:center;">
+            <div style="width:50px;height:50px;border-radius:50%;background:#e0e0e0;margin:0 auto 8px;"></div>
+            <div style="font-size:13px;font-weight:bold;">あの子</div>
+            <div style="font-size:10px;opacity:0.6;">代表・ディレクター</div>
+          </div>
+          <div style="border:1px solid #ddd;border-radius:8px;padding:16px;text-align:center;">
+            <div style="width:50px;height:50px;border-radius:50%;background:#e0e0e0;margin:0 auto 8px;"></div>
+            <div style="font-size:13px;font-weight:bold;">やっさん</div>
+            <div style="font-size:10px;opacity:0.6;">演出</div>
+          </div>
+          <div style="border:1px solid #ddd;border-radius:8px;padding:16px;text-align:center;">
+            <div style="width:50px;height:50px;border-radius:50%;background:#e0e0e0;margin:0 auto 8px;"></div>
+            <div style="font-size:13px;font-weight:bold;">元怒</div>
+            <div style="font-size:10px;opacity:0.6;">モデリング</div>
+          </div>
+          <div style="border:1px solid #ddd;border-radius:8px;padding:16px;text-align:center;">
+            <div style="width:50px;height:50px;border-radius:50%;background:#e0e0e0;margin:0 auto 8px;"></div>
+            <div style="font-size:13px;font-weight:bold;">Mosco</div>
+            <div style="font-size:10px;opacity:0.6;">音響</div>
+          </div>
+          <div style="border:1px solid #ddd;border-radius:8px;padding:16px;text-align:center;">
+            <div style="width:50px;height:50px;border-radius:50%;background:#e0e0e0;margin:0 auto 8px;"></div>
+            <div style="font-size:13px;font-weight:bold;">たろー</div>
+            <div style="font-size:10px;opacity:0.6;">2Dデザイン</div>
+          </div>
+          <div style="border:1px solid #ddd;border-radius:8px;padding:16px;text-align:center;">
+            <div style="width:50px;height:50px;border-radius:50%;background:#e0e0e0;margin:0 auto 8px;"></div>
+            <div style="font-size:13px;font-weight:bold;">tkt</div>
+            <div style="font-size:10px;opacity:0.6;">技術</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#A0EFFC;padding:12px;text-align:center;font-size:11px;color:#7C8AA9;">
+        &copy; 2026 QuestMaker
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:12px;">
+    <span class="label">コンポーネント:</span>
+    <code>Header</code> → <code>PageHeader</code> → <code>SocialLinks</code> → <code>MemberCard[]</code> → <code>Footer</code>
+  </div>
+</div>

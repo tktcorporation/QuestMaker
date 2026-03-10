@@ -6,11 +6,13 @@ import {
 } from '@tanstack/react-router'
 import type { ReactNode } from 'react'
 import appCss from '~/styles/app.css?url'
+import { Header } from '~/components/Header'
+import { Footer } from '~/components/Footer'
 
 /**
  * ルートレイアウト。
  * HTML シェル、meta タグ、グローバル CSS の読み込みを担当する。
- * Header/Footer は Task 4 で追加予定。現時点では Outlet のみ配置。
+ * Header と Footer で全ページ共通のナビゲーションを提供。
  */
 export const Route = createRootRoute({
   head: () => ({
@@ -47,7 +49,9 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <HeadContent />
       </head>
       <body className="bg-bg text-text font-sans antialiased">
-        {children}
+        <Header />
+        <main>{children}</main>
+        <Footer />
         <Scripts />
       </body>
     </html>

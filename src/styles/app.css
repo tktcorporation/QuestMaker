@@ -7,6 +7,18 @@
  * mockup/style.css のカラーパレットを TailwindCSS v4 の @theme で定義。
  * 各色の用途はデザインスペック (docs/superpowers/specs/2026-03-10-company-website-design.md) を参照。
  */
+/**
+ * 日本語の文節区切り改行。
+ * word-break: auto-phrase は Chrome 119+ で BudouX ベースの
+ * 自然な改行位置を自動判定する。非対応ブラウザでは normal にフォールバック。
+ * text-wrap: pretty で末尾の短い孤立語（orphans）も軽減。
+ */
+html {
+  word-break: auto-phrase;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+
 @theme {
   --font-sans: 'Noto Sans JP', system-ui, -apple-system, sans-serif;
   --color-bg: #fafafa;

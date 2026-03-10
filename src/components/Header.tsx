@@ -15,11 +15,11 @@ export function Header() {
   return (
     <header className="bg-surface border-b border-border">
       <div className="max-w-[1200px] mx-auto flex items-center justify-between px-7 py-2">
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center -my-3">
           <img
             src="/images/QuestMaker_Logo_alpha.png"
             alt="QuestMaker"
-            className="h-12 md:h-14"
+            className="h-[72px] md:h-[88px]"
           />
         </Link>
 

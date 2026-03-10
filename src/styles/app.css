@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap");
 
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /**
  * QuestMaker デザイントークン。
@@ -20,7 +20,7 @@ html {
 }
 
 @theme {
-  --font-sans: 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+  --font-sans: "Noto Sans JP", system-ui, -apple-system, sans-serif;
   --color-bg: #f9f8f7;
   --color-surface: #ffffff;
   --color-text: #1f1f1f;
@@ -39,7 +39,9 @@ html {
  * カード hover で浮遊感、ボタン hover で沈み込みフィードバック。
  */
 .card-hover {
-  transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+  transition:
+    transform 200ms ease-out,
+    box-shadow 200ms ease-out;
 }
 .card-hover:hover {
   transform: translateY(-2px);
@@ -54,7 +56,9 @@ html {
 }
 
 .btn-hover {
-  transition: opacity 150ms ease-out, transform 150ms ease-out;
+  transition:
+    opacity 150ms ease-out,
+    transform 150ms ease-out;
 }
 .btn-hover:hover {
   opacity: 0.88;

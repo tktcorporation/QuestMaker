@@ -25,5 +25,5 @@ export function PhotoStrip() {
         </div>
       </div>
     </div>
-  )
+  );
 }

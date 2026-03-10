@@ -1,10 +1,10 @@
-import type { Work } from '~/data/works'
-import { Globe } from 'lucide-react'
-import { Badge } from '~/components/ui/badge'
+import type { Work } from "~/data/works";
+import { Globe } from "lucide-react";
+import { Badge } from "~/components/ui/badge";
 
 interface WorkCardProps {
-  work: Work
-  featured?: boolean
+  work: Work;
+  featured?: boolean;
 }
 
 /**
@@ -12,28 +12,28 @@ interface WorkCardProps {
  * カテゴリ表示に Badge コンポーネントを使用。
  */
 export function WorkCard({ work, featured = false }: WorkCardProps) {
-  const categoryLabel = work.category === 'live' ? 'Live World' : 'Game World'
-  const badgeColor = work.category === 'live' ? 'green' : 'blue'
+  const categoryLabel = work.category === "live" ? "Live World" : "Game World";
+  const badgeColor = work.category === "live" ? "green" : "blue";
 
   return (
     <div>
       <img
         src={work.image}
         alt={work.title}
-        className={`w-full object-cover rounded-xl ${featured ? 'aspect-[2/1]' : 'aspect-[16/9]'}`}
+        className={`w-full object-cover rounded-xl ${featured ? "aspect-[2/1]" : "aspect-[16/9]"}`}
       />
-      <div className={featured ? 'pt-4' : 'pt-3'}>
+      <div className={featured ? "pt-4" : "pt-3"}>
         <div className="flex items-center gap-3 mb-2">
           <Badge colorScheme={badgeColor}>{categoryLabel}</Badge>
           <span className="text-[13px] text-text-subtle">{work.year}</span>
         </div>
-        <h3 className={`font-bold text-text ${featured ? 'text-xl tracking-tight mb-2' : 'text-base'}`}>
+        <h3
+          className={`font-bold text-text ${featured ? "text-xl tracking-tight mb-2" : "text-base"}`}
+        >
           {work.title}
         </h3>
         {featured && (
-          <p className="text-[15px] text-text-muted leading-[1.7] mt-2">
-            {work.description}
-          </p>
+          <p className="text-[15px] text-text-muted leading-[1.7] mt-2">{work.description}</p>
         )}
         {!featured && work.subtitle && (
           <p className="text-sm text-text-muted mt-1">{work.subtitle}</p>
@@ -51,5 +51,5 @@ export function WorkCard({ work, featured = false }: WorkCardProps) {
         )}
       </div>
     </div>
-  )
+  );
 }

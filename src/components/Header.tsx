@@ -1,7 +1,7 @@
-import { useState } from 'react'
-import { Link } from '@tanstack/react-router'
-import { Menu, X } from 'lucide-react'
-import { SocialButton } from './SocialButton'
+import { useState } from "react";
+import { Link } from "@tanstack/react-router";
+import { Menu, X } from "lucide-react";
+import { SocialButton } from "./SocialButton";
 
 /**
  * サイト共通ナビバー。
@@ -11,7 +11,7 @@ import { SocialButton } from './SocialButton'
  * モバイル: ハンバーガーメニューでナビ・ソーシャルを折りたたみ
  */
 export function Header() {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className="bg-surface border-b border-border">
@@ -30,7 +30,7 @@ export function Header() {
             <Link
               to="/"
               className="link-hover"
-              activeProps={{ className: 'text-text font-medium' }}
+              activeProps={{ className: "text-text font-medium" }}
               activeOptions={{ exact: true }}
             >
               Top
@@ -38,14 +38,14 @@ export function Header() {
             <Link
               to="/works"
               className="link-hover"
-              activeProps={{ className: 'text-text font-medium' }}
+              activeProps={{ className: "text-text font-medium" }}
             >
               Works
             </Link>
             <Link
               to="/members"
               className="link-hover"
-              activeProps={{ className: 'text-text font-medium' }}
+              activeProps={{ className: "text-text font-medium" }}
             >
               Members
             </Link>
@@ -55,11 +55,7 @@ export function Header() {
 
           <div className="flex gap-2">
             <SocialButton variant="x" href="https://x.com/QuestMaker_" compact />
-            <SocialButton
-              variant="booth"
-              href="https://questmaker.booth.pm/"
-              compact
-            />
+            <SocialButton variant="booth" href="https://questmaker.booth.pm/" compact />
           </div>
         </div>
 
@@ -67,7 +63,7 @@ export function Header() {
         <button
           className="md:hidden p-2 text-text"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? 'メニューを閉じる' : 'メニューを開く'}
+          aria-label={menuOpen ? "メニューを閉じる" : "メニューを開く"}
         >
           {menuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -80,7 +76,7 @@ export function Header() {
             <Link
               to="/"
               onClick={() => setMenuOpen(false)}
-              activeProps={{ className: 'text-text font-medium' }}
+              activeProps={{ className: "text-text font-medium" }}
               activeOptions={{ exact: true }}
             >
               Top
@@ -88,28 +84,24 @@ export function Header() {
             <Link
               to="/works"
               onClick={() => setMenuOpen(false)}
-              activeProps={{ className: 'text-text font-medium' }}
+              activeProps={{ className: "text-text font-medium" }}
             >
               Works
             </Link>
             <Link
               to="/members"
               onClick={() => setMenuOpen(false)}
-              activeProps={{ className: 'text-text font-medium' }}
+              activeProps={{ className: "text-text font-medium" }}
             >
               Members
             </Link>
           </nav>
           <div className="flex gap-2">
             <SocialButton variant="x" href="https://x.com/QuestMaker_" compact />
-            <SocialButton
-              variant="booth"
-              href="https://questmaker.booth.pm/"
-              compact
-            />
+            <SocialButton variant="booth" href="https://questmaker.booth.pm/" compact />
           </div>
         </div>
       )}
     </header>
-  )
+  );
 }

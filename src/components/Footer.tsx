@@ -1,4 +1,4 @@
-import { SocialButton } from './SocialButton'
+import { SocialButton } from "./SocialButton";
 
 /**
  * サイト共通フッター。
@@ -12,18 +12,10 @@ export function Footer() {
       <div className="max-w-[1200px] mx-auto px-7 py-8">
         <div className="flex justify-between items-start">
           <div>
-            <img
-              src="/images/QuestMaker_Logo_alpha.png"
-              alt="QuestMaker"
-              className="h-16"
-            />
+            <img src="/images/QuestMaker_Logo_alpha.png" alt="QuestMaker" className="h-16" />
           </div>
           <div className="flex flex-col gap-2.5 items-end">
-            <SocialButton
-              variant="x"
-              label="@QuestMaker_"
-              href="https://x.com/QuestMaker_"
-            />
+            <SocialButton variant="x" label="@QuestMaker_" href="https://x.com/QuestMaker_" />
             <SocialButton
               variant="booth"
               label="BOOTH ショップ"
@@ -36,5 +28,5 @@ export function Footer() {
         </p>
       </div>
     </footer>
-  )
+  );
 }

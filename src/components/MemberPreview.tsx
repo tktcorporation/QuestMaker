@@ -1,7 +1,7 @@
-import { Link } from '@tanstack/react-router'
-import { members } from '~/data/members'
-import { buttonClass } from '~/components/ui/button'
-import { SectionHeader } from '~/components/ui/section-header'
+import { Link } from "@tanstack/react-router";
+import { members } from "~/data/members";
+import { buttonClass } from "~/components/ui/button";
+import { SectionHeader } from "~/components/ui/section-header";
 
 /**
  * トップページ用メンバープレビュー。
@@ -34,22 +34,18 @@ export function MemberPreview() {
                   className="h-full w-auto object-contain object-bottom"
                 />
               </div>
-              <p className="text-[13px] font-semibold text-text leading-tight">
-                {member.name}
-              </p>
-              <p className="text-[11px] text-text-muted mt-0.5">
-                {member.role}
-              </p>
+              <p className="text-[13px] font-semibold text-text leading-tight">{member.name}</p>
+              <p className="text-[11px] text-text-muted mt-0.5">{member.role}</p>
             </div>
           ))}
         </div>
 
         <div className="text-center mt-10">
-          <Link to="/members" className={buttonClass('primary', 'lg')}>
+          <Link to="/members" className={buttonClass("primary", "lg")}>
             メンバーを見る
           </Link>
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -8,10 +8,10 @@ export function HeroSection() {
       className="w-full bg-cover bg-center"
       style={{
         backgroundImage: "url('/images/header.png')",
-        aspectRatio: '3 / 1',
+        aspectRatio: "3 / 1",
       }}
       role="img"
       aria-label="QuestMaker ヒーロー画像"
     />
-  )
+  );
 }

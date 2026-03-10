@@ -7,20 +7,20 @@
  */
 
 const colorSchemes = {
-  green: 'text-accent-green bg-accent-green/8',
-  blue: 'text-accent-blue bg-accent-blue/8',
-} as const
+  green: "text-accent-green bg-accent-green/8",
+  blue: "text-accent-blue bg-accent-blue/8",
+} as const;
 
-export type BadgeColorScheme = keyof typeof colorSchemes
+export type BadgeColorScheme = keyof typeof colorSchemes;
 
 export function Badge({
   children,
-  colorScheme = 'green',
-  className = '',
+  colorScheme = "green",
+  className = "",
 }: {
-  children: React.ReactNode
-  colorScheme?: BadgeColorScheme
-  className?: string
+  children: React.ReactNode;
+  colorScheme?: BadgeColorScheme;
+  className?: string;
 }) {
   return (
     <span
@@ -28,5 +28,5 @@ export function Badge({
     >
       {children}
     </span>
-  )
+  );
 }

@@ -1,6 +1,6 @@
-import type { Member } from '~/data/members'
-import { Badge } from '~/components/ui/badge'
-import { XIcon } from '~/components/ui/icons'
+import type { Member } from "~/data/members";
+import { Badge } from "~/components/ui/badge";
+import { XIcon } from "~/components/ui/icons";
 
 /**
  * メンバーカード。2カラムグリッド用の横並びレイアウト。
@@ -11,17 +11,11 @@ import { XIcon } from '~/components/ui/icons'
  */
 
 /** メンバーごとの微回転角度。手貼りステッカー風の散らし。 */
-const rotations = [-2, 1.5, -1, 2.5, -1.5, 2, -2.5, 1]
+const rotations = [-2, 1.5, -1, 2.5, -1.5, 2, -2.5, 1];
 
-export function MemberCard({
-  member,
-  index = 0,
-}: {
-  member: Member
-  index?: number
-}) {
-  const hasDistinctIcon = member.image !== member.panelImage
-  const rotation = rotations[index % rotations.length]
+export function MemberCard({ member, index = 0 }: { member: Member; index?: number }) {
+  const hasDistinctIcon = member.image !== member.panelImage;
+  const rotation = rotations[index % rotations.length];
 
   return (
     <div className="flex items-center gap-5">
@@ -46,17 +40,13 @@ export function MemberCard({
             />
           )}
           <div>
-            <p className="text-lg font-bold text-text leading-tight">
-              {member.name}
-            </p>
+            <p className="text-lg font-bold text-text leading-tight">{member.name}</p>
             <Badge colorScheme={member.roleLabel} className="mt-0.5">
               {member.role}
             </Badge>
           </div>
         </div>
-        <p className="text-sm text-text-muted leading-[1.7] mt-2">
-          {member.description}
-        </p>
+        <p className="text-sm text-text-muted leading-[1.7] mt-2">{member.description}</p>
         {/* Xリンク — 右寄せのボタン風 */}
         <div className="flex justify-end mt-3">
           <a
@@ -71,5 +61,5 @@ export function MemberCard({
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import { Link } from '@tanstack/react-router'
-import { buttonClass } from '~/components/ui/button'
+import { Link } from "@tanstack/react-router";
+import { buttonClass } from "~/components/ui/button";
 
 /**
  * ミッション文 + CTA ボタン + グループ写真。
@@ -28,15 +28,15 @@ export function MissionStatement() {
             そんな思いを胸に集まった仲間たちで結成したVRChatのクリエイターチームです。プラットフォームの壁を越えて「みんなで仲良く」楽しめるコンテンツを制作しています！
           </p>
           <div className="flex gap-3 justify-center md:justify-start">
-            <Link to="/works" className={buttonClass('primary', 'lg')}>
+            <Link to="/works" className={buttonClass("primary", "lg")}>
               実績を見る
             </Link>
-            <Link to="/members" className={buttonClass('secondary', 'lg')}>
+            <Link to="/members" className={buttonClass("secondary", "lg")}>
               メンバーを見る
             </Link>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

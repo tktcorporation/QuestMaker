@@ -2,6 +2,9 @@
 	"name": "questmaker-web",
 	"private": true,
 	"type": "module",
+	"engines": {
+		"node": ">=22"
+	},
 	"imports": {
 		"#/*": "./src/*"
 	},
@@ -10,6 +13,11 @@
 		"build": "vite build",
 		"preview": "pnpm run build && vite preview",
 		"test": "vitest run",
+		"lint": "oxlint --tsconfig tsconfig.json --type-aware",
+		"lint:fix": "oxlint --tsconfig tsconfig.json --type-aware --fix",
+		"fmt": "oxfmt --write src/",
+		"fmt:check": "oxfmt --check src/",
+		"check": "pnpm lint && pnpm fmt:check",
 		"deploy": "pnpm run build && wrangler deploy",
 		"cf-typegen": "wrangler types"
 	},
@@ -36,6 +44,9 @@
 		"@types/react-dom": "^19.2.0",
 		"@vitejs/plugin-react": "^5.0.4",
 		"jsdom": "^27.0.0",
+		"oxfmt": "^0.37.0",
+		"oxlint": "^1.52.0",
+		"oxlint-tsgolint": "^0.16.0",
 		"typescript": "^5.7.2",
 		"vite": "^7.1.7",
 		"vite-tsconfig-paths": "^5.1.4",

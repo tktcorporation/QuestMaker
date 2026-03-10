@@ -1,15 +1,15 @@
-import type { WorkCategory } from '~/data/works'
+import type { WorkCategory } from "~/data/works";
 
 interface WorkFilterProps {
-  active: 'all' | WorkCategory
-  onChange: (filter: 'all' | WorkCategory) => void
+  active: "all" | WorkCategory;
+  onChange: (filter: "all" | WorkCategory) => void;
 }
 
 const filters = [
-  { key: 'all' as const, label: 'All' },
-  { key: 'live' as const, label: 'Live' },
-  { key: 'game' as const, label: 'Game' },
-]
+  { key: "all" as const, label: "All" },
+  { key: "live" as const, label: "Live" },
+  { key: "game" as const, label: "Game" },
+];
 
 /**
  * 実績ページのカテゴリフィルター。アンダーラインタブ形式。
@@ -24,8 +24,8 @@ export function WorkFilter({ active, onChange }: WorkFilterProps) {
             onClick={() => onChange(f.key)}
             className={`text-sm pb-2.5 transition-all duration-150 cursor-pointer ${
               active === f.key
-                ? 'text-text font-medium border-b-[1.5px] border-text'
-                : 'text-text-subtle'
+                ? "text-text font-medium border-b-[1.5px] border-text"
+                : "text-text-subtle"
             }`}
           >
             {f.label}
@@ -33,5 +33,5 @@ export function WorkFilter({ active, onChange }: WorkFilterProps) {
         ))}
       </div>
     </div>
-  )
+  );
 }

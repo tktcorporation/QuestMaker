@@ -1,29 +1,28 @@
-import { createFileRoute } from '@tanstack/react-router'
-import { useState } from 'react'
-import { PageHeader } from '~/components/PageHeader'
-import { WorkFilter } from '~/components/WorkFilter'
-import { WorkCard } from '~/components/WorkCard'
-import { works, type WorkCategory } from '~/data/works'
+import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { PageHeader } from "~/components/PageHeader";
+import { WorkFilter } from "~/components/WorkFilter";
+import { WorkCard } from "~/components/WorkCard";
+import { works, type WorkCategory } from "~/data/works";
 
-export const Route = createFileRoute('/works')({
+export const Route = createFileRoute("/works")({
   head: () => ({
     meta: [
-      { title: '制作実績 — QuestMaker' },
+      { title: "制作実績 — QuestMaker" },
       {
-        name: 'description',
-        content: 'QuestMakerの制作実績。VRChat上で制作したワールド・コンテンツを紹介します。',
+        name: "description",
+        content: "QuestMakerの制作実績。VRChat上で制作したワールド・コンテンツを紹介します。",
       },
-      { property: 'og:title', content: '制作実績 — QuestMaker' },
+      { property: "og:title", content: "制作実績 — QuestMaker" },
     ],
   }),
   component: WorksPage,
-})
+});
 
 function WorksPage() {
-  const [filter, setFilter] = useState<'all' | WorkCategory>('all')
-  const filtered =
-    filter === 'all' ? works : works.filter((w) => w.category === filter)
-  const [featured, ...rest] = filtered
+  const [filter, setFilter] = useState<"all" | WorkCategory>("all");
+  const filtered = filter === "all" ? works : works.filter((w) => w.category === filter);
+  const [featured, ...rest] = filtered;
 
   return (
     <>
@@ -47,5 +46,5 @@ function WorksPage() {
         </div>
       )}
     </>
-  )
+  );
 }

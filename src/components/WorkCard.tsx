@@ -17,11 +17,7 @@ export function WorkCard({ work, featured = false }: WorkCardProps) {
 
   return (
     <div>
-      <img
-        src={work.image}
-        alt={work.title}
-        className={`w-full object-cover rounded-xl ${featured ? "aspect-[2/1]" : "aspect-[16/9]"}`}
-      />
+      <img src={work.image} alt={work.title} className="w-full rounded-xl" />
       <div className={featured ? "pt-4" : "pt-3"}>
         <div className="flex items-center gap-3 mb-2">
           <Badge colorScheme={badgeColor}>{categoryLabel}</Badge>

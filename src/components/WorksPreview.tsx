@@ -31,11 +31,7 @@ export function WorksPreview() {
         <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-5 md:gap-6">
           {/* Featured */}
           <div className="md:row-span-2">
-            <img
-              src={featured.image}
-              alt={featured.title}
-              className="w-full aspect-[16/10] object-cover rounded-xl"
-            />
+            <img src={featured.image} alt={featured.title} className="w-full rounded-xl" />
             <div className="pt-3">
               <Badge
                 colorScheme={featured.category === "live" ? "green" : "blue"}
@@ -51,11 +47,7 @@ export function WorksPreview() {
           {/* Small items */}
           {rest.map((work) => (
             <div key={work.id}>
-              <img
-                src={work.image}
-                alt={work.title}
-                className="w-full aspect-[16/9] object-cover rounded-xl"
-              />
+              <img src={work.image} alt={work.title} className="w-full rounded-xl" />
               <div className="pt-2.5">
                 <Badge colorScheme={work.category === "live" ? "green" : "blue"} className="mb-1">
                   {work.category === "live" ? "Live World" : "Game World"}

@@ -20,7 +20,7 @@ export const works: Work[] = [
     description:
       '"みんな仲良く"楽しいライブ！サンリオキャラクターズが歌って、踊って、会場をひとつに。みんな一緒に楽しめる特別なライブ体験をQuestMakerが担当しました。',
     category: "live",
-    image: "/images/achievement1.webp",
+    image: "/images/achievement-live2026.webp",
     year: 2026,
   },
   {
@@ -30,7 +30,7 @@ export const works: Work[] = [
     description:
       "不思議な世界で暮らす謎の生き物「モグ」。調査員としてこぎみゅんと一緒にモグのお世話をしながらモグについて調べてみよう！",
     category: "game",
-    image: "/images/achievement2.webp",
+    image: "/images/achievement-metamog.webp",
     externalUrl: "https://vrch.at/hhc79ztx",
     year: 2026,
   },
@@ -41,7 +41,7 @@ export const works: Work[] = [
     description:
       "今日もどこかで素敵な音楽が鳴り響くMIDICITY。Mashumairesh!!・DOKONJOFINGERのライブ体験をQuestMakerが担当しました。",
     category: "live",
-    image: "/images/achievement3.webp",
+    image: "/images/achievement-sb69world.webp",
     externalUrl: "https://vrch.at/rbxx0bmg",
     year: 2026,
   },

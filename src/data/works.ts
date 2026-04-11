@@ -25,7 +25,7 @@ export const works: Work[] = [
   },
   {
     id: "metamog",
-    title: "めたモグ",
+    title: "めたモグ - Metamogphose Lab.",
     subtitle: "ふしぎな生き物をこぎみゅんと育てるゲームワールド",
     description:
       "不思議な世界で暮らす謎の生き物「モグ」。調査員としてこぎみゅんと一緒にモグのお世話をしながらモグについて調べてみよう！",
